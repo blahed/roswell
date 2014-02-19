@@ -9,6 +9,7 @@
 
 /config/mongoid.yml
 /config/initializers/roswell_key.rb
+.rvmrc
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

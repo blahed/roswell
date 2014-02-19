@@ -24,6 +24,10 @@
       <span class="add-on"><span class="clippy" data-text="<%= @license.licensed_to %>"></span></span>
     </div>
 
+    <div class="">
+      <%= link_to "Download License File", @license.license_file_url %>
+    </div>
+
     <%= f.label :comments %>
     <%= f.text_area :comments, :class => 'span8', :rows => 6 %>
 

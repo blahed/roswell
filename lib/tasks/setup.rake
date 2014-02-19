@@ -4,6 +4,10 @@ namespace :roswell do
     create_roswell_key
   end
 
+  task :create_admin_user => [:environment] do
+    create_admin_user
+  end
+
   desc 'Do initial setup to get roswell up and running'
   task :setup => [:create_roswell_key, :environment] do
     create_admin_user

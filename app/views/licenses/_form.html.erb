@@ -1,7 +1,7 @@
 <%= render 'shared/errors', :target => @license %>
 
 <div class="span8">
-  <%= form_for @license do |f| %>
+  <%= form_for @license, :html => {:multipart => true} do |f| %>
 
     <%= f.label :title %>
     <%= f.text_field :title, :class => 'span7' %>
@@ -11,6 +11,9 @@
 
     <%= f.label :licensed_to %>
     <%= f.text_field :licensed_to, :class => 'span7' %>
+
+    <%= f.label :license_file %>
+    <%= f.file_field :license_file %>
 
     <%= f.label :comments %>
     <%= f.text_area :comments, :class => 'span8', :rows => 6 %>

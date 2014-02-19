@@ -74,6 +74,7 @@ class Accounts::GenericAccountsController < ApplicationController
       :title,
       :username,
       :password,
+      :license_file,
       :comments,
       :group_ids
     ).merge(

@@ -23,6 +23,10 @@
       <span class="add-on"><span class="clippy" data-text="<%= @account.password %>"></span></span>
     </div>
 
+    <div class="">
+      <%= link_to "Download License File", @account.license_file_url %>
+    </div>
+
     <%= f.label :comments %>
     <%= f.text_area :comments, :class => 'span8', :rows => 6 %>
   <% end %>

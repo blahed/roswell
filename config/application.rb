@@ -6,6 +6,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
+require "mongoid/railtie"
 # require "rails/test_unit/railtie"
 
 require File.expand_path('../../lib/mongoid-encryptable', __FILE__)

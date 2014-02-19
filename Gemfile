@@ -1,19 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.17'
 gem 'strong_parameters', '~> 0.1.5'
 
-gem 'mongoid', '~> 2.5.1'
+gem 'mongoid', '~> 2'
 gem 'bson_ext', '~> 1.7.0'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3'
 
 gem 'jquery-rails'
 gem 'unicorn'
 
-gem 'gibberish', '~> 1.2.0'
+gem 'gibberish', '~> 1'
+
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 group :development do
-  gem 'faker', '~> 1.1.2'
+  gem 'faker', '~> 1'
 end
 
 group :development, :test do
@@ -22,7 +25,7 @@ end
 
 group :test do
   gem 'database_cleaner', '>= 0.7.2'
-  gem 'factory_girl_rails', '~> 4.1.0'
+  gem 'factory_girl_rails', '~> 4'
   # gem 'mocha', '~> 0.12.1'
 end
 

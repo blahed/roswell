@@ -33,6 +33,18 @@ Roswell is just a rails app so clone it down somewhere and:
 
 Then just start your choice of server (you'll wanna put it behind SSL).
 
+
+## Create & configure for Heroku
+
+	> gem install heroku
+	> heroku create example-roswell --stack cedar
+	> heroku addons:add mongolab:starter
+	> heroku config:add HEROKU=true
+	> heroku config:add ROSWELL_KEY=`ruby -r securerandom -e "puts SecureRandom.hex(64)"`
+	> git push heroku master
+	> heroku run rake roswell:create_admin_user
+
+
 ## Dependencies
 
 * Ruby 1.9

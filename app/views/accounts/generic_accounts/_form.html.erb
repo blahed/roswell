@@ -1,7 +1,7 @@
 <%= render 'shared/errors', :target => @account %>
 
 <div class="span8">
-  <%= form_for [ :accounts, @account ] do |f| %>
+  <%= form_for [ :accounts, @account ], :html => {:multipart => true} do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title, :class => 'span7' %>
 
@@ -10,6 +10,9 @@
 
     <%= f.label :password %>
     <%= f.text_field :password, :class => 'span7' %>
+
+    <%= f.label :license_file %>
+    <%= f.file_field :license_file %>
 
     <%= f.label :comments %>
     <%= f.text_area :comments, :class => 'span8', :rows => 6 %>

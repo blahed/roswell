@@ -6,6 +6,8 @@ Roswell::Application.routes.draw do
 
   get 'search', :to => 'search#index'
 
+  match "/files/uploads/*path" => "gridfs#serve"
+
   resources :favorites, :only => [ :index, :create ]
   delete '/favorites', :to => 'favorites#destroy'
 

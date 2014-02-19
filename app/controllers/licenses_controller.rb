@@ -74,6 +74,7 @@ class LicensesController < ApplicationController
       :title,
       :license_key,
       :licensed_to,
+      :license_file,
       :comments,
       :group_ids
     ).merge(
